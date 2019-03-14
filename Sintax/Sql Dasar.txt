@@ -1,0 +1,40 @@
+Dasar-Dasar MySQL
+
+1.Membuat Database
+	CREATE DATABASE Latihan1;
+
+2.Menampilkan Daftar Basis Data
+	SHOW DATABASES;
+
+3.Use Database
+	Use Latihan1;
+
+4.Membuat Table
+	CREATE TABLE Latihan1 (Nama VARCHAR(50), Alamat TEXT);
+
+5.Menampilkan Struktur Tabel
+	Desc Latihan1;
+
+6.Menambahkan Field
+	ALTER TABLE Latihan1 ADD COLUMN NIM int(10) FIRST;
+
+7.Menambahkan Nama Field
+	ALTER TABLE latihan1 CHANGE Alamat Alamat_jalan VARCHAR(100);
+
+8.Mengubah Type Data
+	ALTER TABLE Latihan1 MODIFY Alamat_jalan TINYTEXT;
+
+9.Menghapus Field
+	ALTER TABLE Latihan1 DROP Alamat_jalan;
+
+10.Menambahkan Index dan Key
+	ALTER TABLE Latihan1 ADD PRIMARY KEY (NIM);
+
+11.Menghapus Primary Key
+	ALTER TABLE Latihan1 DROP PRIMARY KEY;
+
+12.Menghapus Database
+	DROP DATABASE Latihan1;
+
+SELAMAT MENCOBA......
+

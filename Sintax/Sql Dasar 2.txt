@@ -1,0 +1,39 @@
+Memanipulasi data di mysql
+
+1.Membuat table
+	CREATE TABLE mahasiswa (NIM int(10), Nama varchar(100), Alamatjalan varchar(150), Kota varchar(50), Kodepos varchar(5), noHP varchar(13), Jeniskelamin varchar(15), TanggalLahir date, KodeDosen varchar(5));
+
+2. Menambahkan key
+	ALTER TABLE mahasiswa ADD PRIMARY KEY (NIM);
+
+3. Memasukan data 
+	INSERT INTO mahasiswa (NIM, Nama, Alamatjalan, Kota, Kodepos, noHP, Jeniskelamin, TanggalLahir, KodeDosen) VALUE ('112 23344', 'Ari Santoso', 'Jln.Situ Bondo', 'Bekasi', '17535', '08964369764', 'Laki-laki', '1998-10-12', 'A001');
+
+4. Menampilkan isi data
+	SELECT * FROM mahasiswa;
+
+5.Mengubah isi data (disini saya ingin mengubah tanggal lahir Ari Santoso)
+	UPDATE mahasiswa SET TanggalLahir = '1979-08-31' WHERE NIM = '11223344';
+
+6. Memanggil 1 data dari 6 data (disini saya menampilkan Ari santoso saja)
+	SELECT * FROM mahasiswa WHERE NIM = '11223344';
+
+7. Menghapus data (disini saya akan menghapus data Dina)
+	DELETE FROM mahasiswa WHERE NIM ='11223346';
+
+8. Menampilkan data kelahiran yang lebih dari atau sama (disini saya menggunakan tahun '1996-01-02')
+	SELECT NIM, Nama, Alamatjalan, Kota, Kodepos, noHP, Jeniskelamin, TanggalLahir, KodeDosen FROM mahasiswa WHERE TanggalLahir >= '1996-01-02' order by nim;
+
+9. Menampilkan data Kota yang sama (disini saya akan memakai kota Bekasi yang bejenis kelamin perempuan)
+	SELECT * FROM mahasiswa WHERE Kota = 'Bekasi' and Jeniskelamin = 'Perempuan';
+
+10. Menampilakan Usia di data (disini saya memanggil kota Bekasi dan berjenis kelamin Laki-laki dan Perempuan yang umurnya lebih dari 22 tahun)
+	SELECT * FROM mahasiswa WHERE Kota = 'Bekasi' and Jeniskelamin = 'Laki-laki' or timestampdiff (YEAR, TanggalLahir, curdate()) and Jeniskelamin='Perempuan';
+
+11. Menampilkan data Nama dan Alamat
+	SELECT Nama, Alamatjalan FROM mahasiswa;
+
+12. Menampilkan Data Nama berurutan sesuai abjad
+	SELECT * FROM mahasiswa order by Nama asc;
+
+Selamat Belajar dan Selamat Mencoba.......

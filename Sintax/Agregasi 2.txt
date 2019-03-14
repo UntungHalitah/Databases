@@ -1,0 +1,19 @@
+1. Tampilkan jumlah hewan yang dimiliki setiap owner.
+	select owner, count(species) as jumlah from peliharaan group by owner;
+
+2. Tampilkan jumlah hewan berdasarkan spesies
+	select (species) from peliharaan;
+
+3. Tampilkan jumlah hewan berdasarkan jenis kelamin
+	select sex, count(sex) as jumlah from peliharaan group by sex;
+
+4. Tampilkan jumlah hewan berdasarkan spesies dan jenis kelamin
+	select species, sex, count(species) as jumlah from peliharaan group by species;
+
+5. Tampilkan  jumlah  hewan  berdasarkan  spesis  (cat  dan  dog  saja)  dan  jenis kelamin
+	select species, sex, count(species) as jumlah from peliharaan where (species = "cat" or species 	= "dog") group by sex,species;
+
+6. Tampilkan jumlah hewan berdasarkan jenis kelamin yang diketahui saja
+	select sex, species from peliharaan where sex is not null group by sex, species;
+
+Selamat Mencoba ^_^

@@ -1,0 +1,24 @@
+1. perintah Count digunakan untuk menghitung jumlah baris suatu kolom: 
+	select count (nama) from data_barang;
+
+2. Perintah Sum digunakan  untuk  menghitung  jumlah  nilai  suatu  kolom  pada tabel:
+	SELECT SUM(harga)AS Jumlah FROM data_barang;
+
+3. Perintah AVG digunakan  untuk  menghitung  rata-rata  dari  nilai  suatu  kolom pada tabel:
+	SELECT AVG(harga)AS rerata FROM data_barang; 
+
+4. Perintah MIN Perintah  yang  digunakan  untuk menampilkan  nilai  terkecil  dari  suatu  kolom pada tabel:
+	SELECT MIN(harga)AS termurah FROM data_barang;
+
+5. Perintah MAX Perintah  yang  digunakan  untuk menampilkan  nilai  terbesar  dari  suatu  kolom pada  tabel:
+	SELECT MAX(harga)AS termahal FROM data_barang:
+	
+6. Perintah GROUP BY:
+	A. Menghitung jumlah masing-masing jenis Barang:
+	SELECT JenisBarang, COUNT(kode) AS Jumlah FROM data_barang GROUP BY JenisBarang;
+
+	B. Menghitung total harga dari masing-masing jenis Barang
+	SELECT JenisBarang, SUM(harga) AS Jumlah FROM data_barang GROUP BY JenisBarang;
+
+
+
